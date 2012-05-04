@@ -5,7 +5,11 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3', '1.3.5'
+  gem 'rspec-rails', '2.9.0'
+  gem 'guard-rspec', '0.5.5'
+end
 
 
 # Gems used only for assets and not required
@@ -21,6 +25,21 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :test do
+  gem 'rspec-rails', '2.9.0'
+  gem 'capybara', '1.1.2'
+  # https://github.com/thibaudgg/rb-fsevent/issues/20
+  gem 'rb-fsevent', :git => 'git://github.com/ttilley/rb-fsevent.git', :branch => 'pre-compiled-gem-one-off'
+  # gem 'rb-fsevent', '0.4.3.1', :require => false
+  gem 'growl', '1.0.3'
+  gem 'guard-spork', '0.3.2'
+  gem 'spork', '0.9.0'
+end
+
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
