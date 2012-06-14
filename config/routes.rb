@@ -1,5 +1,6 @@
 DemoApp::Application.routes.draw do
-    resources :users
+  resources :users
+  resources :sessions, only: [:new, :create, :destroy] # Restrict to new create and destroy RESTful routes
 # get "users/new"
 
   root to: 'static_pages#home'
@@ -8,6 +9,10 @@ DemoApp::Application.routes.draw do
   match '/help',    to: 'static_pages#help'
   match '/about',   to: 'static_pages#about'
   match '/contact', to: 'static_pages#contact'
+  match '/signin',  to: 'sessions#new'
+
+  # DELETE  /signout  signout_path  destroy delete a session (sign out)
+  match '/signout', to: 'sessions#destroy', via: :delete
 
   # get "static_pages/home"
 
