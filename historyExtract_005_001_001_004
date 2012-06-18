@@ -1,0 +1,16 @@
+use MagellanHistory
+if not exists(select * from POHistoryLocale where localeCode = 'English') select 'There is no prior record of the POHistoryNotes in the following language in the target database: English'
+if not exists(select * from CMHistoryLocale where localeCode = 'English') select 'There is no prior record of the CMHistoryNotes in the following language in the target database: English'
+if not exists(select * from POHistoryLocale where localeCode = 'Spanish') select 'There is no prior record of the POHistoryNotes in the following language in the target database: Spanish'
+if not exists(select * from CMHistoryLocale where localeCode = 'Spanish') select 'There is no prior record of the CMHistoryNotes in the following language in the target database: Spanish'
+if not exists(select * from POHistoryLocale where localeCode = 'Kyrgyz') select 'There is no prior record of the POHistoryNotes in the following language in the target database: Kyrgyz'
+if not exists(select * from CMHistoryLocale where localeCode = 'Kyrgyz') select 'There is no prior record of the CMHistoryNotes in the following language in the target database: Kyrgyz'
+if not exists(select * from POHistoryLocale where localeCode = 'French') select 'There is no prior record of the POHistoryNotes in the following language in the target database: French'
+if not exists(select * from CMHistoryLocale where localeCode = 'French') select 'There is no prior record of the CMHistoryNotes in the following language in the target database: French'
+if not exists(select * from POHistoryLocale where localeCode = 'Chinese') select 'There is no prior record of the POHistoryNotes in the following language in the target database: Chinese'
+if not exists(select * from CMHistoryLocale where localeCode = 'Chinese') select 'There is no prior record of the CMHistoryNotes in the following language in the target database: Chinese'
+--
+--
+-- The following HistoryNotes were not exported, as they have not yet been translated:
+--
+/*
